@@ -1,4 +1,4 @@
-#include "FrostProtect.h"
+#include "Frotect.h"
 
 /*
 pin-out of sensor connector (top view on jack mounted in housing)
