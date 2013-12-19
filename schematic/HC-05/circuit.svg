@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Fritzing (http://www.fritzing.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="269.57379"
+   x="0in"
+   version="1.2"
+   y="0in"
+   height="215.59882"
+   viewBox="0 0 215.65855 172.47902"
+   id="svg3415"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="circuit.svg">
+  <metadata
+     id="metadata3510">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3508" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="885"
+     inkscape:window-height="588"
+     id="namedview3506"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.99948631"
+     inkscape:cx="135.20001"
+     inkscape:cy="97.538157"
+     inkscape:window-x="2203"
+     inkscape:window-y="95"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3415" />
+  <g
+     width="2.40001"
+     x="0"
+     y="63.7795"
+     gorn="0.2.6"
+     height="2.4"
+     id="connector16terminal"
+     style="fill:none;stroke-width:0"
+     transform="translate(0.6607672,5.0067901e-6)" />
+  <g
+     width="2.40001"
+     x="212.599"
+     y="63.7795"
+     gorn="0.2.10"
+     height="2.4"
+     id="connector14terminal"
+     style="fill:none;stroke-width:0"
+     transform="translate(0.6607672,5.0067901e-6)" />
+  <g
+     width="2.40001"
+     x="212.599"
+     y="85.0391"
+     gorn="0.2.14"
+     height="2.4"
+     id="connector13terminal"
+     style="fill:none;stroke-width:0"
+     transform="translate(0.6607672,5.0067901e-6)" />
+  <g
+     width="2.40001"
+     x="212.599"
+     y="106.299"
+     gorn="0.2.18"
+     height="2.4"
+     id="connector12terminal"
+     style="fill:none;stroke-width:0"
+     transform="translate(0.6607672,5.0067901e-6)" />
+  <g
+     width="2.40001"
+     x="106.299"
+     y="0"
+     gorn="0.2.22"
+     height="0"
+     id="connector15terminal"
+     style="fill:none;stroke-width:0"
+     transform="translate(0.6607672,5.0067901e-6)" />
+  <g
+     width="2.40001"
+     x="106.299"
+     y="172.479"
+     gorn="0.2.26"
+     height="0"
+     id="connector17terminal"
+     style="fill:none;stroke-width:0"
+     transform="translate(0.6607672,5.0067901e-6)" />
+  <g
+     id="g3575"
+     transform="translate(0.6607672,5.0067901e-6)">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2.40001011;stroke-linecap:round;stroke-linejoin:round"
+       id="rect3469"
+       height="127.559"
+       y="22.459801"
+       x="22.4599"
+       width="170.078" />
+    <text
+       style="font-size:18px;text-anchor:middle;fill:#000000;stroke:none;font-family:Droid Sans"
+       font-size="18"
+       id="label"
+       gorn="0.2.1"
+       y="79.379486"
+       x="107.499">Bluetooth</text>
+    <text
+       style="font-size:18px;text-anchor:middle;fill:#000000;stroke:none;font-family:Droid Sans"
+       font-size="18"
+       id="text3472"
+       gorn="0.2.2"
+       y="100.63929"
+       x="107.499">HC-05</text>
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2.40001011;stroke-linecap:round;stroke-linejoin:round"
+       id="line3476"
+       x2="21.259899"
+       y2="64.9795"
+       x1="1.2"
+       y1="64.9795" />
+    <rect
+       style="fill:none;stroke-width:0"
+       connectorName="CTS_5V"
+       id="connector16pin"
+       height="2.4000001"
+       gorn="0.2.5"
+       y="63.779499"
+       x="0"
+       width="21.259899" />
+    <text
+       style="font-size:9.9360199px;text-anchor:start;fill:#000000;stroke:none;font-family:Droid Sans"
+       font-size="9.93602"
+       id="label16"
+       gorn="0.2.7"
+       y="67.379501"
+       x="27.74">STATE</text>
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2.40001011;stroke-linecap:round;stroke-linejoin:round"
+       id="line3481"
+       x2="213.798"
+       y2="64.9795"
+       x1="192.539"
+       y1="64.9795" />
+    <rect
+       style="fill:none;stroke-width:0"
+       id="connector14pin"
+       height="2.4000001"
+       connectorname="TX_5V"
+       gorn="0.2.9"
+       y="63.779499"
+       x="193.73801"
+       width="21.259899" />
+    <text
+       style="font-size:9.9360199px;text-anchor:end;fill:#000000;stroke:none;font-family:Droid Sans"
+       font-size="9.93602"
+       id="label14"
+       gorn="0.2.11"
+       y="67.379501"
+       x="187.258">TX</text>
+    <rect
+       style="fill:none;stroke-width:0"
+       id="connector13pin"
+       height="2.4000001"
+       connectorname="RX_5V"
+       gorn="0.2.13"
+       y="85.039101"
+       x="193.73801"
+       width="21.259899" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2.40001011;stroke-linecap:round;stroke-linejoin:round"
+       id="line3491"
+       x2="213.798"
+       y2="107.499"
+       x1="192.539"
+       y1="107.499" />
+    <rect
+       style="fill:none;stroke-width:0"
+       id="connector12pin"
+       height="2.4000001"
+       connectorname="RTS_5V"
+       gorn="0.2.17"
+       y="106.299"
+       x="193.73801"
+       width="21.259899" />
+    <text
+       style="font-size:9.9360199px;text-anchor:end;fill:#000000;stroke:none;font-family:Droid Sans"
+       font-size="9.93602"
+       id="label12"
+       gorn="0.2.19"
+       y="109.899"
+       x="187.258">RX</text>
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2.40001011;stroke-linecap:round;stroke-linejoin:round"
+       id="line3496"
+       x2="107.499"
+       y2="21.259899"
+       x1="107.499"
+       y1="1.2" />
+    <rect
+       style="fill:none;stroke-width:0"
+       id="connector15pin"
+       height="21.259899"
+       connectorname="VCC"
+       gorn="0.2.21"
+       y="0"
+       x="106.299"
+       width="2.4000101" />
+    <text
+       style="font-size:9.9360199px;text-anchor:middle;fill:#000000;stroke:none;font-family:Droid Sans"
+       font-size="9.93602"
+       id="label15"
+       gorn="0.2.23"
+       y="33.859901"
+       x="107.499">VCC</text>
+    <line
+       style="fill:none;stroke:#000000;stroke-width:2.40001011;stroke-linecap:round;stroke-linejoin:round"
+       id="line3501"
+       x2="107.499"
+       y2="171.27901"
+       x1="107.499"
+       y1="151.21899" />
+    <rect
+       style="fill:none;stroke-width:0"
+       id="connector17pin"
+       height="21.259899"
+       connectorname="GND"
+       gorn="0.2.25"
+       y="151.21899"
+       x="106.299"
+       width="2.4000101" />
+    <text
+       style="font-size:9.9360199px;text-anchor:middle;fill:#000000;stroke:none;font-family:Droid Sans"
+       font-size="9.93602"
+       id="label17"
+       gorn="0.2.27"
+       y="145.459"
+       x="107.499">GND</text>
+    <line
+       y1="107.499"
+       x1="0.53901386"
+       y2="107.499"
+       x2="21.798006"
+       id="line3571"
+       style="fill:none;stroke:#000000;stroke-width:2.40001011;stroke-linecap:round;stroke-linejoin:round" />
+    <text
+       x="27.74"
+       y="108.9795"
+       gorn="0.2.7"
+       id="text3573"
+       font-size="9.93602"
+       style="font-size:9.9360199px;text-anchor:start;fill:#000000;stroke:none;font-family:Droid Sans">KEY</text>
+  </g>
+</svg>
