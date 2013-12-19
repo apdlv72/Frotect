@@ -17,3 +17,6 @@ osx/eEEPROM.o
 eeprom_data.bin
 backup/
 broken
+Frotect
+Frotect.o
+Makefile
