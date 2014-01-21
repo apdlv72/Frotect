@@ -1141,7 +1141,7 @@ void dump_minmax()
 	int   minutes  = ts_optime % interval_minutes; // 0,...,359 minutes
 	//float hours    = 1.0*minutes/60;
 	//PPRINT("MM:N=0,c=1,t=-"); Serial.print(hours,1); PPRINT("h,i=-1,");
-	PPRINT("MM:N=0,c=1,t=0,i=-1,");
+	PPRINT("MM:N=0,c=1,t=0h,i=-1,");
 
 	for (uint8_t s=0; s<MAX_SENSORS; s++)
 	{
