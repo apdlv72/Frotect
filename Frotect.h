@@ -68,8 +68,8 @@ typedef struct s_strand_info_eeprom
 	// Range -32768,...,32767 thus corresponds to limits -327C,...,327C
 	int16_t  temp_lower_start100; // lower limit that will cause strand to light up
 	int16_t  temp_upper_start100; // upper limit that will cause power down
-	// power consumption stored in watts
-	uint8_t  watts;
+	// power consumption stored in 2*watts, e.g. a value of 200 means 400W
+	uint8_t  watts2;
 	// 1+1+1 = 2 bytes
 
 	s_sensor_info sensor;
@@ -99,7 +99,7 @@ struct s_strand_info //: s_strand_info_eeprom
 	// below values are the same as in s_strand_info_eeprom
 	int16_t       temp_lower100;
 	int16_t       temp_upper100;
-	uint8_t       watts;
+	uint8_t       watts2;
 	s_sensor_info sensor;
 	#ifdef WITH_TEMP_RAMPING
 	uint16_t      ramp_start_day;

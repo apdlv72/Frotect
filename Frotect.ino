@@ -281,16 +281,16 @@ static int16_t to_temp100(float f)
 	return i;
 }
 
-uint8_t to_eeprom_watts(int16_t w)
-{
-	return constrain(w, 0, 255);
-}
+//uint8_t to_eeprom_watts(int16_t w)
+//{
+//	return constrain(w/2, 0, 255);
+//}
 
 static void from_eeprom(s_strand_info_eeprom &ee, s_strand_info &ram)
 {
 	ram.temp_lower100         = ee.temp_lower_start100;
 	ram.temp_upper100         = ee.temp_upper_start100;
-	ram.watts                 = ee.watts;
+	ram.watts2                = ee.watts2;
 	ram.sensor                = ee.sensor;
 	#ifdef WITH_TEMP_RAMPING
 	// initial call to update_temp_ramping() in setup() will update
@@ -306,7 +306,7 @@ static void to_eeprom(s_strand_info &ram, s_strand_info_eeprom &ee)
 {
 	ee.temp_lower_start100   = ram.temp_lower100;
 	ee.temp_upper_start100   = ram.temp_upper100;
-	ee.watts                 = to_eeprom_watts(ram.watts);
+	ee.watts2                = ram.watts2;
 	ee.sensor                = ram.sensor;
 	#ifdef WITH_TEMP_RAMPING
 	ee.temp_lower_start100   = ram.temp_lower_start100;
@@ -390,8 +390,14 @@ static void eeprom_init()
 			s_strand_info & strand = strand_infos[s];
 			strand.temp_lower100         = 350; // DEFAULT_LOWER; // 3.0f;
 			strand.temp_upper100         = 500; // DEFAULT_UPPER; // 5.0f;
-			// my 2nd (s=1) strand has 16W/m and is 9 meters long, other strands are 6m*16.1W
-			strand.watts                 = (1==s) ? (9*16) : 97; // (6.0f*16.1f);
+			// my 2nd (s=1) strand has 16W/m and is 9 meters long, other strands are 6m*16.1W,
+			// there are four strands however connected to first relay
+			switch (s)
+			{
+			case 0 : strand.watts2 = (4*97)/2; break; // 4 strands a 97W on relay 1
+			case 1 : strand.watts2 = 144/2;    break; // 9m a 16 strand on relay 2
+			default: strand.watts2 = (97+1)/2; break; // 97W strands on relay 2/3
+			}
 			strand.pin                   = RELAY_PINS[s];
 			strand.ts_last_change        = ts_optime;
 			strand.update                = 1; // make sure it gets dumped initially
@@ -812,7 +818,7 @@ static void dump_stats_hours()
 				//p = (1.0f*hour.mins_on)/60;
 				//E = p*0.5f*(info.watts2);
 				ratio = (1.0f/60.0f) * hour.mins_on;
-				E = ratio*info.watts;
+				E = ratio*(2*info.watts2);
 				subE   += E;
 				totalE += E;
 			}
@@ -881,7 +887,7 @@ void dump_stats_days()
 					//PPRINT("hour_idx=["); Serial.print(day.hour_index); PPRINT(","); Serial.print(day.hour_index+23); PPRINT("]");
 				}
 				ratio = (1.0f/(24.0f*60.0f)) * day.mins_on;
-				E     = ratio * 24.0f        * info.watts;
+				E     = ratio * 24.0f        * (2*info.watts2);
 				subE   += E;
 				totalE += E;
 			}
@@ -954,7 +960,7 @@ void dump_stats_weeks()
 				//p = (2.0f*week.hours2_on)/(7*24); // *2 because of limited precision (2 hour slots)
 				// compiler will optimize the float number computations
 				ratio = (2.0f/(7.0f*24.0f)) * week.hours2_on; // *2 because of limited precision (2 hour slots)
-				E     = ratio*(7.0f*24.0f)  * info.watts;
+				E     = ratio*(7.0f*24.0f)  * (2*info.watts2);
 				subE   += E;
 				totalE += E;
 			}
@@ -1537,7 +1543,7 @@ static void dump_strand_info(uint8_t n, s_strand_info & i, boolean single, boole
 		PPRINT(",rsd=");   Serial.print(i.ramp_start_day,       DEC); // rsd = ramp start days
 	}
 	#endif
-	PPRINT(",P=");     Serial.print(i.watts,      DEC);
+	PPRINT(",P=");     Serial.print(2*i.watts2,  DEC);
 	PPRINT(",t=");
 	if (i.temp_valid)
 	{
@@ -1859,9 +1865,9 @@ static void check_serial()
 					}
 					else if ('P'==first)
 					{
-						i = constrain(i, 0, 250);
-						PPRINT("SET.s="); Serial.print(num+1); PPRINT(",P="); Serial.println(i, DEC);
-						strand_infos[num].watts = i;
+						i = constrain((i+1)/2, 0,255);
+						PPRINT("SET.s="); Serial.print(num+1); PPRINT(",P="); Serial.println(2*i, DEC);
+						strand_infos[num].watts2 = i;
 					}
 					#ifdef WITH_TEMP_RAMPING
 					else if ('R'==first)
